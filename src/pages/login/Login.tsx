@@ -2,6 +2,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { FormEvent, useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 
+import './Login.css';
+
 function Login() {
 
     const { nome, trocarNome } = useContext(AuthContext)
@@ -16,7 +18,7 @@ function Login() {
         return (
             <>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold ">
+            <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold onSubmit={login}">
                 <form className="flex justify-center items-center flex-col w-1/2 gap-4" 
                     onSubmit={handleSubmit} >
                     <h2 className="text-slate-900 text-5xl">Entrar</h2>
